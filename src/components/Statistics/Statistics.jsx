@@ -1,5 +1,6 @@
-export const Statistics = ({title, stats}) => {
-  
+import PropTypes from 'prop-types';
+
+export const Statistics = ({ title, stats }) => {
   return (
     <>
       <section className="statistics">
@@ -18,7 +19,10 @@ export const Statistics = ({title, stats}) => {
     </>
   );
 };
-
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.object,
+};
 // import { data } from 'data';
 
 // export const Statistics = (title, stats) => {

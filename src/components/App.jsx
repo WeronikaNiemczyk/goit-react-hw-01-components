@@ -1,24 +1,23 @@
-// import { data } from 'data';
-import { Profile } from './Profile';
-import { user } from 'user';
-import { Statistics } from './Statistics';
-import { data } from 'data';
-import { FriendsList } from './FriendsList';
-import { friends } from 'friends';
+import { Profile } from './Profile/Profile';
+import { user } from 'components/Profile/user';
+import { Statistics } from './Statistics/Statistics';
+import { data } from 'components/Statistics/data';
+import { FriendsList } from './FriendsList/FriendsList';
+import { friends } from 'components/FriendsList/friends';
+import { transactions } from 'components/Transactions/transactions';
 import { Transactions } from './Transactions';
-import { transactions } from 'transactions';
 
 export const App = () => {
   return (
     <>
       <div
         style={{
-          height: '100vh',
-          display: 'flex',
+          // height: '100vh',
+          // display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           fontSize: 40,
-          color: '#010101',
+          // color: '#010101',
         }}
       >
         <Profile

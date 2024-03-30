@@ -5,7 +5,7 @@ import { data } from 'components/Statistics/data';
 import { FriendsList } from './FriendsList/FriendsList';
 import { friends } from 'components/FriendsList/friends';
 import { transactions } from 'components/Transactions/transactions';
-import { Transactions } from './Transactions';
+import { Transactions } from './Transactions/Transactions.jsx';
 
 export const App = () => {
   return (

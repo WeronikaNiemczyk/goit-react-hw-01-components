@@ -1,33 +1,32 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import './friendsStyle.module.css';
+import css from './FriendsStyle.module.css';
 
 export const FriendsList = ({ friends }) => {
   return (
     <>
-      <ul className="friend-list">
+      <ul className={css.friend_list}>
         {friends.map((friend, index) => (
-          <li className="person" key={index}>
+          <li className={css.person} key={index}>
             <span
-              className={
-                friend.isOnline
-                  ? friendsStyle.statusOnline
-                  : friendsStyle.statusOffline
-              }
+              className={css.status}
+              style={{
+                backgroundColor: `${friend.isOnline ? 'green' : 'red'}`,
+              }}
             ></span>
             <img
-              className="avatar"
+              className={css.avatar}
               src={friend.avatar}
               alt="User avatar"
               width="48"
             />
-            <p className="name">{friend.name}</p>
+            <p className={css.name}>{friend.name}</p>
           </li>
         ))}
       </ul>
     </>
   );
 };
+
 FriendsList.propTypes = {
   friends: PropTypes.node,
 };

@@ -1,4 +1,4 @@
-.friend-list {
+.friend_list {
   width: 425px;
   margin: auto;
 }
@@ -12,17 +12,12 @@
   border-radius: 3px;
 }
 
-.statusOnline .statusOffline {
+.status {
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: green;
   margin: 0 15px 0 15px;
-}
-
-.statusOffline {
-  background-color: red;
 }
 
 .avatar {

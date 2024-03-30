@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import css from './StatisticsStyle.module.css';
 
 export const Statistics = ({ title, stats }) => {
+  const randomColor = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  };
   return (
     <>
       <section className={css.statistics}>
@@ -9,7 +12,11 @@ export const Statistics = ({ title, stats }) => {
 
         <ul className={css.stat_list}>
           {stats.map((stat, index) => (
-            <li className={css.item} key={index}>
+            <li
+              style={{ backgroundColor: randomColor() }}
+              className={css.item}
+              key={index}
+            >
               <span className={css.label}>{stat.label}</span>
               <br></br>
               <span className={css.percentage}>{stat.percentage}%</span>
@@ -22,27 +29,11 @@ export const Statistics = ({ title, stats }) => {
 };
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.object,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
-// import { data } from 'data';
-
-// export const Statistics = (title, stats) => {
-//   //   const { id, label, percentage } = data;
-//   return (
-//     <>
-//       <section className="statistics">
-//         <h2 className="title">Upload stats</h2>
-
-//         <ul className="stat-list">
-//           {data.map((d, index) => (
-//             <li className="item" key={index}>
-//               <span className="label">{d.label}</span>
-//               <br></br>
-//               <span className="percentage">{d.percentage}%</span>
-//             </li>
-//           ))}
-//         </ul>
-//       </section>
-//     </>
-//   );
-// };

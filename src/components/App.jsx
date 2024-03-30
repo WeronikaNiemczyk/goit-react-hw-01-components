@@ -1,10 +1,10 @@
 import { Profile } from './Profile/Profile';
-import { user } from 'components/Profile/user';
+import user from 'components/Profile/user.json';
 import { Statistics } from './Statistics/Statistics';
-import { data } from 'components/Statistics/data';
+import data from 'components/Statistics/data.json';
 import { FriendsList } from './FriendsList/FriendsList';
-import { friends } from 'components/FriendsList/friends';
-import { transactions } from 'components/Transactions/transactions';
+import friends from './FriendsList/friends.json';
+import transactions from 'components/Transactions/transactions.json';
 import { Transactions } from './Transactions/Transactions.jsx';
 
 export const App = () => {
@@ -12,12 +12,9 @@ export const App = () => {
     <>
       <div
         style={{
-          // height: '100vh',
-          // display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           fontSize: 40,
-          // color: '#010101',
         }}
       >
         <Profile

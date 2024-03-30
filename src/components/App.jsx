@@ -1,6 +1,8 @@
-import { data } from 'data';
+// import { data } from 'data';
 import { Profile } from './Profile';
+import { user } from 'user';
 import { Statistics } from './Statistics';
+import { data } from 'data';
 import { FriendsList } from './FriendsList';
 import { friends } from 'friends';
 import { Transactions } from './Transactions';
@@ -19,8 +21,14 @@ export const App = () => {
           color: '#010101',
         }}
       >
-        <Profile />
-        <Statistics title stats statisticData={data} />
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <Statistics title="Upload stats" stats={data} />
         <FriendsList friends={friends} />
         <Transactions items={transactions} />
       </div>
